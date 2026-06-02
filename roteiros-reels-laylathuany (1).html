@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roteiros de Reels — Layla Thuany</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --rose:        #C17B8A;
+    --rose-deep:   #9E5E6F;
+    --rose-pale:   #F7EAED;
+    --rose-mid:    #E8B4BE;
+    --green:       #2D6B5E;
+    --green-light: #4A8F7F;
+    --green-pale:  #E2F0ED;
+    --cream:       #FBF8F4;
+    --beige:       #EDE5D8;
+    --beige-dark:  #D8CDBF;
+    --dark:        #221A1D;
+    --text:        #3E2E34;
+    --text-mid:    #6B5560;
+    --text-light:  #9A8490;
+    --white:       #FFFFFF;
+  }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    font-family: 'Outfit', sans-serif;
+    color: var(--text);
+    line-height: 1.6;
+  }
+
+  /* ══ COVER ══ */
+  .cover {
+    min-height: 300px;
+    background: linear-gradient(160deg, var(--rose-deep) 0%, var(--rose) 45%, #D49CAA 100%);
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    padding: 60px 32px 52px;
+    position: relative; overflow: hidden; text-align: center;
+  }
+  .cover::before {
+    content: ''; position: absolute;
+    width: 380px; height: 380px; border-radius: 50%;
+    background: rgba(255,255,255,0.06); top: -120px; right: -80px;
+  }
+  .cover::after {
+    content: ''; position: absolute;
+    width: 240px; height: 240px; border-radius: 50%;
+    background: rgba(255,255,255,0.05); bottom: -80px; left: -40px;
+  }
+  .cover-butterfly {
+    font-size: 36px; margin-bottom: 12px; display: block;
+    animation: float 4s ease-in-out infinite;
+  }
+  @keyframes float {
+    0%,100% { transform: translateY(0) rotate(-4deg); }
+    50%      { transform: translateY(-8px) rotate(4deg); }
+  }
+  .cover-name {
+    font-family: 'Dancing Script', cursive; font-size: 52px;
+    color: #fff; line-height: 1; display: block;
+    text-shadow: 0 2px 16px rgba(0,0,0,0.18);
+  }
+  .cover-role {
+    font-size: 11px; letter-spacing: 3.5px; text-transform: uppercase;
+    color: rgba(255,255,255,0.72); margin-top: 6px; display: block;
+  }
+  .cover-badge {
+    margin-top: 20px; display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(255,255,255,0.18); border: 1px solid rgba(255,255,255,0.32);
+    color: white; font-size: 13px; font-weight: 500;
+    padding: 8px 22px; border-radius: 100px; backdrop-filter: blur(6px);
+  }
+
+  /* ══ NAV ══ */
+  .nav-strip {
+    background: var(--green); display: flex; justify-content: center;
+    gap: 4px; padding: 0 16px; flex-wrap: wrap;
+    position: sticky; top: 0; z-index: 100;
+  }
+  .nav-strip a {
+    color: rgba(255,255,255,0.82); font-size: 11px; font-weight: 600;
+    letter-spacing: 1px; text-transform: uppercase; text-decoration: none;
+    padding: 13px 14px; border-bottom: 2px solid transparent;
+    transition: all .2s; white-space: nowrap;
+  }
+  .nav-strip a:hover { color: white; border-bottom-color: var(--rose-mid); }
+
+  /* ══ LAYOUT ══ */
+  .page {
+    max-width: 820px; margin: 0 auto;
+    padding: 52px 24px 72px;
+    display: flex; flex-direction: column; gap: 56px;
+  }
+
+  /* ══ REEL CARD ══ */
+  .reel {
+    background: var(--white); border-radius: 24px; overflow: hidden;
+    box-shadow: 0 2px 32px rgba(158,94,111,0.10), 0 1px 4px rgba(0,0,0,0.04);
+    border: 1px solid rgba(193,123,138,0.14);
+    animation: rise .5s ease both;
+  }
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .reel-bar { height: 5px; }
+  .r1 .reel-bar { background: linear-gradient(90deg, #C17B8A, #E8B4BE); }
+  .r2 .reel-bar { background: linear-gradient(90deg, #2D6B5E, #4A8F7F); }
+  .r3 .reel-bar { background: linear-gradient(90deg, #9E5E6F, #C17B8A); }
+  .r4 .reel-bar { background: linear-gradient(90deg, #8B6040, #C49970); }
+
+  /* Card header */
+  .reel-head {
+    padding: 28px 36px 0;
+    display: flex; align-items: flex-start; gap: 18px;
+  }
+  .reel-num-badge {
+    width: 52px; height: 52px; border-radius: 14px;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    flex-shrink: 0; font-weight: 700; line-height: 1;
+  }
+  .r1 .reel-num-badge { background: var(--rose-pale); color: var(--rose-deep); }
+  .r2 .reel-num-badge { background: var(--green-pale); color: var(--green); }
+  .r3 .reel-num-badge { background: #F2E4EA; color: var(--rose-deep); }
+  .r4 .reel-num-badge { background: #F5EDDF; color: #7A4E28; }
+  .reel-num-badge .num { font-size: 20px; }
+  .reel-num-badge .of  { font-size: 9px; letter-spacing: 1px; opacity: .7; text-transform: uppercase; }
+
+  .reel-title-block { flex: 1; }
+  .reel-week {
+    font-size: 10px; font-weight: 700; letter-spacing: 2.5px;
+    text-transform: uppercase; display: inline-block;
+    padding: 3px 12px; border-radius: 100px; margin-bottom: 8px;
+  }
+  .r1 .reel-week { background: var(--rose-pale); color: var(--rose-deep); }
+  .r2 .reel-week { background: var(--green-pale); color: var(--green); }
+  .r3 .reel-week { background: #F2E4EA; color: var(--rose-deep); }
+  .r4 .reel-week { background: #F5EDDF; color: #7A4E28; }
+
+  .reel-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px; font-weight: 700; color: var(--dark); line-height: 1.25;
+  }
+  .reel-desc { font-size: 13px; color: var(--text-light); margin-top: 4px; }
+
+  /* Card body */
+  .reel-body { padding: 24px 36px 36px; display: flex; flex-direction: column; gap: 28px; }
+
+  /* Section heading */
+  .sec-head { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; }
+  .sec-head-line { height: 2px; flex: 1; border-radius: 2px; background: var(--beige); }
+  .sec-head-label {
+    font-size: 10px; font-weight: 700; letter-spacing: 2.5px;
+    text-transform: uppercase; color: var(--text-light); white-space: nowrap;
+  }
+
+  /* ── SCRIPT BLOCK ── */
+  .script-wrap {
+    border-radius: 16px; overflow: hidden;
+    border: 1px solid var(--beige-dark);
+  }
+  .script-label-bar {
+    display: flex; align-items: center; gap: 10px; padding: 10px 18px;
+    font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+  }
+  .r1 .script-label-bar { background: var(--rose-pale); color: var(--rose-deep); }
+  .r2 .script-label-bar { background: var(--green-pale); color: var(--green); }
+  .r3 .script-label-bar { background: #F2E4EA; color: var(--rose-deep); }
+  .r4 .script-label-bar { background: #F5EDDF; color: #7A4E28; }
+
+  /* Cena row — agora coluna única */
+  .scene {
+    border-top: 1px solid var(--beige);
+    padding: 18px 22px;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+
+  .scene-tag {
+    font-size: 9px; font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase; display: inline-block;
+    padding: 2px 10px; border-radius: 100px; width: fit-content;
+  }
+  .tag-gancho    { background: #FDEAED; color: #9E2040; }
+  .tag-meio      { background: #E4F0ED; color: #1E5048; }
+  .tag-chamada   { background: #EDE4F5; color: #5B3A8A; }
+  .tag-transicao { background: #E8EEF8; color: #2A4A8A; }
+
+  /* Fala */
+  .fala {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px; font-weight: 600;
+    color: var(--dark); line-height: 1.6;
+  }
+
+  /* Texto na tela */
+  .tela-text {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--dark); color: white;
+    font-size: 11px; font-weight: 600;
+    padding: 4px 12px; border-radius: 6px;
+    letter-spacing: 0.5px; width: fit-content;
+  }
+
+  /* ── LEGENDA ── */
+  .legenda-box {
+    background: #F8F5F7; border: 1px solid rgba(193,123,138,0.2);
+    border-radius: 14px; padding: 20px 24px;
+  }
+  .legenda-text {
+    font-size: 14px; line-height: 1.75;
+    color: var(--text); white-space: pre-line;
+  }
+
+  /* ── CTA ── */
+  .cta-box {
+    display: flex; align-items: center; gap: 12px;
+    padding: 14px 20px; border-radius: 12px;
+  }
+  .r1 .cta-box { background: var(--rose-deep); }
+  .r2 .cta-box { background: var(--green); }
+  .r3 .cta-box { background: var(--rose-deep); }
+  .r4 .cta-box { background: #7A4E28; }
+  .cta-box span { color: white; font-size: 13px; font-weight: 500; line-height: 1.45; }
+
+  /* ══ FOOTER ══ */
+  .footer { background: var(--dark); padding: 44px 32px; text-align: center; }
+  .footer-name {
+    font-family: 'Dancing Script', cursive; font-size: 34px;
+    color: var(--rose-mid); display: block; margin-bottom: 6px;
+  }
+  .footer-sub { font-size: 12px; color: rgba(255,255,255,0.38); letter-spacing: 1px; }
+
+  /* ══ RESPONSIVE ══ */
+  @media (max-width: 640px) {
+    .cover-name { font-size: 38px; }
+    .reel-head { padding: 22px 20px 0; gap: 14px; }
+    .reel-title { font-size: 20px; }
+    .reel-body { padding: 18px 20px 28px; }
+    .nav-strip a { font-size: 10px; padding: 12px 10px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="cover">
+  <span class="cover-butterfly">🦋</span>
+  <span class="cover-name">Layla Thuany</span>
+  <span class="cover-role">Fisioterapeuta · Pedro II, Piauí</span>
+  <span class="cover-badge">🎬 Roteiros Completos · 4 Reels do Mês</span>
+</header>
+
+<nav class="nav-strip">
+  <a href="#reel1">Reel 1</a>
+  <a href="#reel2">Reel 2</a>
+  <a href="#reel3">Reel 3</a>
+  <a href="#reel4">Reel 4</a>
+</nav>
+
+<main class="page">
+
+
+  <!-- ══════════ REEL 1 ══════════ -->
+  <article class="reel r1" id="reel1">
+    <div class="reel-bar"></div>
+    <div class="reel-head">
+      <div class="reel-num-badge"><span class="num">01</span><span class="of">de 04</span></div>
+      <div class="reel-title-block">
+        <span class="reel-week">Semana 1</span>
+        <h2 class="reel-title">O que a fisioterapia pode fazer por você?</h2>
+        <p class="reel-desc">Apresentação de valor · Educativo · Humanizado</p>
+      </div>
+    </div>
+    <div class="reel-body">
+
+      <div>
+        <div class="sec-head">
+          <span class="sec-head-label">🎬 Roteiro</span>
+          <div class="sec-head-line"></div>
+        </div>
+        <div class="script-wrap">
+          <div class="script-label-bar">📽 Falas</div>
+
+          <div class="scene">
+            <span class="scene-tag tag-gancho">Gancho</span>
+            <p class="fala">"Você acha que fisioterapia é só pra quem se machucou?"</p>
+            <span class="tela-text">📺 Você está errada sobre isso…</span>
+          </div>
+
+          <div class="scene">
+            <span class="scene-tag tag-meio">Desenvolvimento</span>
+            <p class="fala">"Eu preciso te contar uma coisa. Fisioterapia não é só pra dor. É muito mais do que isso."</p>
+          </div>
+
+          <div class="scene">
+            <span class="scene-tag tag-meio">Listagem</span>
+            <p class="fala">"É pra criança que nasceu prematura e precisa de um olhar especial…"</p>
+            <span class="tela-text">📺 BEBÊ / CRIANÇA</span>
+            <p class="fala">"É pra mãe que quer recuperar o corpo e a autoestima depois do parto…"</p>
+            <span class="tela-text">📺 PÓS-PARTO</span>
+            <p class="fala">"É pra sua avó que quer caminhar sem sentir dor todo dia…"</p>
+            <span class="tela-text">📺 IDOSOS</span>
+            <p class="fala">"É pro Pilates que fortalece seu corpo de dentro pra fora…"</p>
+            <span class="tela-text">📺 PILATES</span>
+            <p class="fala">"E é pra você, que sente dor no dia a dia e já se acostumou com isso achando que é normal."</p>
+            <span class="tela-text">📺 NÃO É NORMAL TER DOR!</span>
+          </div>
+
+          <div class="scene">
+            <span class="scene-tag tag-meio">Virada</span>
+            <p class="fala">"A fisioterapia existe pra te ajudar a viver melhor. Não só quando você quebra um osso."</p>
+          </div>
+
+          <div class="scene">
+            <span class="scene-tag tag-chamada">CTA</span>
+            <p class="fala">"Aqui em Pedro II eu atendo na sua casa, no seu horário, com muito cuidado. Minha agenda está aberta. Clica no link da bio e me chama!"</p>
+            <span class="tela-text">📺 AGENDA ABERTA 🦋 @laylathuany_</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="sec-head">
+          <span class="sec-head-label">✏️ Legenda</span>
+          <div class="sec-head-line"></div>
+        </div>
+        <div class="legenda-box">
+          <p class="legenda-text">Fisioterapia não é só pra quem se machucar. 🦋
+
+É pra criança que precisa de um cuidado especial.
+É pra mãe que quer se sentir bem depois do parto.
+É pra sua avó que quer caminhar sem dor.
+É pra você que quer se cuidar de verdade.
+
+E o melhor? Aqui em Pedro II, você pode ter esse cuidado no conforto da sua casa. 🏠
+
+Minha agenda está aberta. Horários flexíveis, atendimento domiciliar e muito carinho em cada sessão. 💚
+
+👉 Link na bio para agendar!
+📞 (86) 99521-0431
+@laylathuany_</p>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <span>📲</span>
+        <span><strong>CTA principal:</strong> "Clica no link da bio e agenda a sua avaliação"</span>
+      </div>
+
+    </div>
+  </article>
+
+
+  <!-- ══════════ REEL 2 ══════════ -->
+  <article class="reel r2" id="reel2">
+    <div class="reel-bar"></div>
+    <div class="reel-head">
+      <div class="reel-num-badge"><span class="num">02</span><span class="of">de 04</span></div>
+      <div class="reel-title-block">
+        <span class="reel-week">Semana 2</span>
+        <h2 class="reel-title">Fisioterapia pediátrica: quando o seu filho precisa?</h2>
+        <p class="reel-desc">Educativo emocional · Mães como público · Acolhimento</p>
+      </div>
+    </div>
+    <div class="reel-body">
+
+      <div>
+        <div class="sec-head">
+          <span class="sec-head-label">🎬 Roteiro</span>
+          <div class="sec-head-line"></div>
+        </div>
+        <div class="script-wrap">
+          <div class="script-label-bar">📽 Falas</div>
+
+          <div class="scene">
+            <span class="scene-tag tag-gancho">Gancho</span>
+            <p class="fala">"Mãe… você sabia que o seu filho pode precisar de fisioterapia — e ninguém nunca te contou por quê?"</p>
+            <span class="tela-text">📺 Fica até o final 👇</span>
+          </div>
+
+          <div class="scene">
+            <span class="scene-tag tag-meio">Contexto</span>
+            <p class="fala">"A fisioterapia pediátrica cuida do desenvolvimento do seu filho desde pequenininho. E muitas crianças precisam desse acompanhamento sem que a família saiba."</p>
+          </div>
+
+          <div class="scene">
+            <span class="scene-tag tag-meio">Sinais</span>
+            <p class="fala">"Presta atenção nesses sinais:"</p>
+            <span class="tela-text">📺 FIQUE ATENTA 👇</span>
+            <p class="fala">"Seu filho nasceu prematuro ou teve alguma intercorrência no parto…"</p>
+            <span class="tela-text">📺 ⚠️ PREMATURO / PARTO DIFÍCIL</span>
+            <p class="fala">"Ele está demorando mais do que o esperado pra sentar, andar ou segurar objetos…"</p>
+            <span class="tela-text">📺 ⚠️ ATRASO NO DESENVOLVIMENTO</span>
+            <p class="fala">"Sempre vira a cabeça pra um lado só, ou a postura parece torta…"</p>
+            <span class="tela-text">📺 ⚠️ TORCICOLO / ASSIMETRIA</span>
+            <p class="fala">"Tem diagnóstico de TEA ou alguma necessidade especial…"</p>
+            <span class="tela-text">📺 ⚠️ TEA / NECESSIDADES ESPECIAIS</span>
+          </div>
+
+          <div class="scene">
+            <span class="scene-tag tag-meio">Acolhimento</span>
+            <p class="fala">"Se você reconheceu algum desses sinais no seu filho, não precisa entrar em desespero. Precisa buscar orientação."</p>
+            <p class="fala">"Quanto antes a criança é avaliada, melhores são os resultados."</p>
+          </div>
+
+          <div class="scene">
+            <span class="scene-tag tag-chamada">CTA</span>
+            <p class="fala">"Sou a Layla Thuany, fisioterapeuta especializada em pediatria aqui em Pedro II. Atendo na sua casa. Me manda uma mensagem — sem compromisso, eu te oriento com carinho."</p>
+            <span class="tela-text">📺 💬 Me chama · (86) 99521-0431</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="sec-head">
+          <span class="sec-head-label">✏️ Legenda</span>
+          <div class="sec-head-line"></div>
+        </div>
+        <div class="legenda-box">
+          <p class="legenda-text">A gente sempre fala de pediatra, vacina, dentista… mas a fisioterapia pediátrica ainda é pouco conhecida. 💙
+
+Seu filho pode precisar se tiver:
+🔹 Nascido prematuro ou com intercorrência no parto
+🔹 Atraso para sentar, andar ou segurar objetos
+🔹 Torcicolo ou assimetrias posturais
+🔹 Diagnóstico de TEA ou necessidades especiais
+
+Quanto antes a criança é avaliada, melhores os resultados. 💚
+
+Sou a Layla Thuany, fisioterapeuta em Pedro II - PI, com atendimento domiciliar pediátrico. Se você ficou com dúvida, me manda mensagem. É sem compromisso, respondo com carinho! 🦋
+
+📞 (86) 99521-0431 · Link na bio
+@laylathuany_</p>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <span>💬</span>
+        <span><strong>CTA principal:</strong> "Me manda uma mensagem e tire suas dúvidas sem compromisso"</span>
+      </div>
+
+    </div>
+  </article>
+
+
+  <!-- ══════════ REEL 3 ══════════ -->
+  <article class="reel r3" id="reel3">
+    <div class="reel-bar"></div>
+    <div class="reel-head">
+      <div class="reel-num-badge"><span class="num">03</span><span class="of">de 04</span></div>
+      <div class="reel-title-block">
+        <span class="reel-week">Semana 3</span>
+        <h2 class="reel-title">3 sinais de que seu corpo está pedindo socorro</h2>
+        <p class="reel-desc">Alto potencial de save · Urgência · Identificação imediata</p>
+      </div>
+    </div>
+    <div class="reel-body">
+
+      <div>
+        <div class="sec-head">
+          <span class="sec-head-label">🎬 Roteiro</span>
+          <div class="sec-head-line"></div>
+        </div>
+        <div class="script-wrap">
+          <div class="script-label-bar">📽 Falas</div>
+
+          <div class="scene">
+            <span class="scene-tag tag-gancho">Gancho</span>
+            <p class="fala">"Se você sente isso no dia a dia… seu corpo está tentando te avisar. E você está ignorando."</p>
+            <span class="tela-text">📺 ⚠️ PARA TUDO E ASSISTE</span>
+          </div>
+
+          <div class="scene">
+            <span class="scene-tag tag-transicao">Transição</span>
+            <p class="fala">"Olha esses 3 sinais. Conta comigo."</p>
+            <span class="tela-text">📺 3 SINAIS QUE VOCÊ NÃO PODE IGNORAR</span>
+          </div>
+
+          <div class="scene">
+            <span class="scene-tag tag-meio">Sinal 1</span>
+            <p class="fala">"Um. Você acorda com dor ou com o corpo travado toda manhã."</p>
+            <span class="tela-text">📺 1️⃣ DOR AO ACORDAR</span>
+            <p class="fala">"Isso não é sinal de cansaço. É o seu corpo dizendo que alguma coisa não está certa."</p>
+          </div>
+
+          <div class="scene">
+            <span class="scene-tag tag-meio">Sinal 2</span>
+            <p class="fala">"Dois. A dor passa… mas volta. Toda semana, todo mês, sempre a mesma dor."</p>
+            <span class="tela-text">📺 2️⃣ DOR QUE SEMPRE VOLTA</span>
+            <p class="fala">"Remédio não resolve isso. O remédio esconde a dor. A fisioterapia trata a causa."</p>
+          </div>
+
+          <div class="scene">
+            <span class="scene-tag tag-meio">Sinal 3</span>
+            <p class="fala">"Três. Você percebeu que perdeu movimento sem entender quando isso aconteceu."</p>
+            <span class="tela-text">📺 3️⃣ PERDEU MOVIMENTO</span>
+            <p class="fala">"Se abaixar, alcançar algo no alto, virar o pescoço — ficou difícil. Isso não é idade. Isso é sinal."</p>
+          </div>
+
+          <div class="scene">
+            <span class="scene-tag tag-chamada">CTA</span>
+            <p class="fala">"A boa notícia? Tudo isso tem solução com a fisioterapia. E aqui em Pedro II você pode ser atendida na sua casa, no seu horário."</p>
+            <p class="fala">"Salva esse vídeo pra não esquecer, e manda pra alguém que precisa ver isso."</p>
+            <span class="tela-text">📺 🔖 SALVA · @laylathuany_</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="sec-head">
+          <span class="sec-head-label">✏️ Legenda</span>
+          <div class="sec-head-line"></div>
+        </div>
+        <div class="legenda-box">
+          <p class="legenda-text">Você "se acostumou" com a dor? Isso não é normal. ⚠️
+
+3 sinais que seu corpo está pedindo socorro:
+
+🔴 1. Você acorda com dor ou rigidez todo dia
+→ Não é cansaço. É seu corpo pedindo atenção.
+
+🔴 2. A dor passa, mas sempre volta
+→ Remédio esconde. Fisioterapia trata a causa.
+
+🔴 3. Você perdeu movimento sem perceber
+→ Se abaixar, alcançar, virar o pescoço ficou difícil. Isso não é idade.
+
+A fisioterapia existe pra isso. E aqui em Pedro II você pode ser atendida na sua casa, no seu horário. 🏠💚
+
+Salva esse post e manda pra quem precisa ver! 🔖
+👉 Link na bio · 📞 (86) 99521-0431
+@laylathuany_</p>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <span>🔖</span>
+        <span><strong>CTA principal:</strong> "Salva esse vídeo" + "Manda pra quem precisa"</span>
+      </div>
+
+    </div>
+  </article>
+
+
+  <!-- ══════════ REEL 4 ══════════ -->
+  <article class="reel r4" id="reel4">
+    <div class="reel-bar"></div>
+    <div class="reel-head">
+      <div class="reel-num-badge"><span class="num">04</span><span class="of">de 04</span></div>
+      <div class="reel-title-block">
+        <span class="reel-week">Semana 4</span>
+        <h2 class="reel-title">Por que eu escolhi atender na sua casa?</h2>
+        <p class="reel-desc">Humanização máxima · Diferencial competitivo · Conversão direta</p>
+      </div>
+    </div>
+    <div class="reel-body">
+
+      <div>
+        <div class="sec-head">
+          <span class="sec-head-label">🎬 Roteiro</span>
+          <div class="sec-head-line"></div>
+        </div>
+        <div class="script-wrap">
+          <div class="script-label-bar">📽 Falas</div>
+
+          <div class="scene">
+            <span class="scene-tag tag-gancho">Gancho</span>
+            <p class="fala">"Eu poderia ter uma clínica. Mas escolhi ir até você."</p>
+            <p class="fala">"E vou te contar o motivo real."</p>
+            <span class="tela-text">📺 O motivo que ninguém te conta 👇</span>
+          </div>
+
+          <div class="scene">
+            <span class="scene-tag tag-meio">Posicionamento</span>
+            <p class="fala">"Quando eu chego na sua casa, você não precisa sair com dor pra me ver. Não precisa pegar sol, chuva, esperar em fila com um bebê no colo ou tirar seu pai idoso de casa pra uma consulta."</p>
+            <span class="tela-text">📺 Sem fila. Sem deslocamento. 🏠</span>
+          </div>
+
+          <div class="scene">
+            <span class="scene-tag tag-meio">Benefícios</span>
+            <p class="fala">"Você recebe o atendimento no lugar onde você se sente segura. No seu espaço. No seu tempo."</p>
+            <p class="fala">"É ideal pra mamães com bebê, pra idosos, pra quem tem mobilidade reduzida, pra quem não tem como sair do trabalho no horário comercial."</p>
+            <span class="tela-text">📺 ✅ No seu lar. No seu horário.</span>
+          </div>
+
+          <div class="scene">
+            <span class="scene-tag tag-meio">Virada pessoal</span>
+            <p class="fala">"Eu escolhi o atendimento domiciliar porque acredito que cuidar de alguém vai além de uma mesa de atendimento. É sobre te olhar como pessoa, não como paciente."</p>
+          </div>
+
+          <div class="scene">
+            <span class="scene-tag tag-chamada">CTA</span>
+            <p class="fala">"Sou Layla Thuany, fisioterapeuta em Pedro II - PI. Atendo com Pilates, fisioterapia pélvica, pediátrica, neurológica e muito mais — tudo na sua casa."</p>
+            <p class="fala">"Minha agenda está aberta. Me chama no link da bio ou no número que está aqui na tela. Te espero!"</p>
+            <span class="tela-text">📺 📞 (86) 99521-0431 · @laylathuany_ 🦋</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="sec-head">
+          <span class="sec-head-label">✏️ Legenda</span>
+          <div class="sec-head-line"></div>
+        </div>
+        <div class="legenda-box">
+          <p class="legenda-text">Não é porque não tenho clínica. É porque escolhi ser diferente. 🦋
+
+Quando eu vou até você, você não precisa:
+❌ Enfrentar fila
+❌ Pegar chuva ou sol com dor
+❌ Sair de casa com seu bebê ou seu pai idoso
+❌ Encaixar a consulta no meio do caos do seu dia
+
+Você recebe o cuidado que merece, onde você se sente segura. ✨
+
+Sou Layla Thuany, fisioterapeuta em Pedro II - PI. Atendo com Pilates, fisioterapia pélvica, pediátrica, neurológica e muito mais — tudo no conforto da sua casa.
+
+Minha agenda está aberta. Me chama! 💚
+📞 (86) 99521-0431 · Link na bio
+@laylathuany_</p>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <span>📲</span>
+        <span><strong>CTA principal:</strong> "Clica no link da bio ou manda mensagem agora — agenda aberta!"</span>
+      </div>
+
+    </div>
+  </article>
+
+
+</main>
+
+<footer class="footer">
+  <span class="footer-name">Layla Thuany</span>
+  <p class="footer-sub">@laylathuany_ · Fisioterapeuta · Pedro II, Piauí 🦋</p>
+</footer>
+
+</body>
+</html>
