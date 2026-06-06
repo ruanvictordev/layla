@@ -23,17 +23,14 @@
     --text-light:  #9A8490;
     --white:       #FFFFFF;
   }
- 
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
- 
   body {
     background: var(--cream);
     font-family: 'Outfit', sans-serif;
     color: var(--text);
     line-height: 1.6;
   }
- 
   /* ══ COVER ══ */
   .cover {
     min-height: 300px;
@@ -76,7 +73,6 @@
     color: white; font-size: 13px; font-weight: 500;
     padding: 8px 22px; border-radius: 100px; backdrop-filter: blur(6px);
   }
- 
   /* ══ NAV ══ */
   .nav-strip {
     background: var(--green); display: flex; justify-content: center;
@@ -90,14 +86,12 @@
     transition: all .2s; white-space: nowrap;
   }
   .nav-strip a:hover { color: white; border-bottom-color: var(--rose-mid); }
- 
   /* ══ LAYOUT ══ */
   .page {
     max-width: 820px; margin: 0 auto;
     padding: 52px 24px 72px;
     display: flex; flex-direction: column; gap: 56px;
   }
- 
   /* ══ REEL CARD ══ */
   .reel {
     background: var(--white); border-radius: 24px; overflow: hidden;
@@ -114,7 +108,6 @@
   .r2 .reel-bar { background: linear-gradient(90deg, #2D6B5E, #4A8F7F); }
   .r3 .reel-bar { background: linear-gradient(90deg, #9E5E6F, #C17B8A); }
   .r4 .reel-bar { background: linear-gradient(90deg, #8B6040, #C49970); }
- 
   /* Card header */
   .reel-head {
     padding: 28px 36px 0;
@@ -132,7 +125,6 @@
   .r4 .reel-num-badge { background: #F5EDDF; color: #7A4E28; }
   .reel-num-badge .num { font-size: 20px; }
   .reel-num-badge .of  { font-size: 9px; letter-spacing: 1px; opacity: .7; text-transform: uppercase; }
- 
   .reel-title-block { flex: 1; }
   .reel-week {
     font-size: 10px; font-weight: 700; letter-spacing: 2.5px;
@@ -143,16 +135,13 @@
   .r2 .reel-week { background: var(--green-pale); color: var(--green); }
   .r3 .reel-week { background: #F2E4EA; color: var(--rose-deep); }
   .r4 .reel-week { background: #F5EDDF; color: #7A4E28; }
- 
   .reel-title {
     font-family: 'Cormorant Garamond', serif;
     font-size: 26px; font-weight: 700; color: var(--dark); line-height: 1.25;
   }
   .reel-desc { font-size: 13px; color: var(--text-light); margin-top: 4px; }
- 
   /* Card body */
   .reel-body { padding: 24px 36px 36px; display: flex; flex-direction: column; gap: 28px; }
- 
   /* Section heading */
   .sec-head { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; }
   .sec-head-line { height: 2px; flex: 1; border-radius: 2px; background: var(--beige); }
@@ -160,7 +149,6 @@
     font-size: 10px; font-weight: 700; letter-spacing: 2.5px;
     text-transform: uppercase; color: var(--text-light); white-space: nowrap;
   }
- 
   /* ── SCRIPT BLOCK ── */
   .script-wrap {
     border-radius: 16px; overflow: hidden;
@@ -174,14 +162,12 @@
   .r2 .script-label-bar { background: var(--green-pale); color: var(--green); }
   .r3 .script-label-bar { background: #F2E4EA; color: var(--rose-deep); }
   .r4 .script-label-bar { background: #F5EDDF; color: #7A4E28; }
- 
   /* Cena */
   .scene {
     border-top: 1px solid var(--beige);
     padding: 18px 22px;
     display: flex; flex-direction: column; gap: 10px;
   }
- 
   .scene-tag {
     font-size: 9px; font-weight: 700; letter-spacing: 2px;
     text-transform: uppercase; display: inline-block;
@@ -192,14 +178,12 @@
   .tag-chamada   { background: #EDE4F5; color: #5B3A8A; }
   .tag-alerta    { background: #FFF3DC; color: #7A5010; }
   .tag-transicao { background: #E8EEF8; color: #2A4A8A; }
- 
   /* Fala */
   .fala {
     font-family: 'Cormorant Garamond', serif;
     font-size: 18px; font-weight: 600;
     color: var(--dark); line-height: 1.6;
   }
- 
   /* Texto na tela */
   .tela-text {
     display: inline-flex; align-items: center; gap: 6px;
@@ -208,7 +192,6 @@
     padding: 4px 12px; border-radius: 6px;
     letter-spacing: 0.5px; width: fit-content;
   }
- 
   /* ── LEGENDA ── */
   .legenda-box {
     background: #F8F5F7; border: 1px solid rgba(193,123,138,0.2);
@@ -218,7 +201,6 @@
     font-size: 14px; line-height: 1.75;
     color: var(--text); white-space: pre-line;
   }
- 
   /* ── CTA ── */
   .cta-box {
     display: flex; align-items: center; gap: 12px;
@@ -229,7 +211,6 @@
   .r3 .cta-box { background: var(--rose-deep); }
   .r4 .cta-box { background: #7A4E28; }
   .cta-box span { color: white; font-size: 13px; font-weight: 500; line-height: 1.45; }
- 
   /* ══ FOOTER ══ */
   .footer { background: var(--dark); padding: 44px 32px; text-align: center; }
   .footer-name {
@@ -237,7 +218,6 @@
     color: var(--rose-mid); display: block; margin-bottom: 6px;
   }
   .footer-sub { font-size: 12px; color: rgba(255,255,255,0.38); letter-spacing: 1px; }
- 
   /* ══ RESPONSIVE ══ */
   @media (max-width: 640px) {
     .cover-name { font-size: 38px; }
@@ -249,24 +229,23 @@
 </style>
 </head>
 <body>
- 
+
 <header class="cover">
   <span class="cover-butterfly">🦋</span>
   <span class="cover-name">Layla Thuany</span>
   <span class="cover-role">Fisioterapeuta · Pedro II, Piauí</span>
   <span class="cover-badge">🎬 Roteiros Completos · 4 Reels do Mês</span>
 </header>
- 
+
 <nav class="nav-strip">
   <a href="#reel1">Reel 1</a>
   <a href="#reel2">Reel 2</a>
   <a href="#reel3">Reel 3</a>
   <a href="#reel4">Reel 4</a>
 </nav>
- 
+
 <main class="page">
- 
-  <!-- ══════════ REEL 1 ══════════ -->
+
   <article class="reel r1" id="reel1">
     <div class="reel-bar"></div>
     <div class="reel-head">
@@ -278,7 +257,6 @@
       </div>
     </div>
     <div class="reel-body">
- 
       <div>
         <div class="sec-head">
           <span class="sec-head-label">🎬 Roteiro</span>
@@ -286,50 +264,42 @@
         </div>
         <div class="script-wrap">
           <div class="script-label-bar">📽 Falas</div>
- 
           <div class="scene">
             <span class="scene-tag tag-gancho">Gancho</span>
             <p class="fala">"Preste atenção nestes 3 sinais de que a cabeça do seu bebê precisa de cuidados urgentes."</p>
             <span class="tela-text">1 em cada 5 bebês tem isso — e a maioria das mães não percebe</span>
           </div>
- 
           <div class="scene">
             <span class="scene-tag tag-alerta">Contexto</span>
             <p class="fala">"Hoje, 1 em cada 5 bebês apresenta assimetria craniana. Mas a maioria das mães só nota quando o caso já está avançado."</p>
           </div>
- 
           <div class="scene">
             <span class="scene-tag tag-meio">Sinal 1</span>
             <p class="fala">"Sinal número um: a cabeça achatada. Seja de um lado — o que chamamos de plagiocefalia — ou atrás, a braquicefalia."</p>
             <span class="tela-text">1. CABEÇA ACHATADA</span>
             <p class="fala">"Ao contrário do que muita gente diz, isso não desaparece com o tempo."</p>
           </div>
- 
           <div class="scene">
             <span class="scene-tag tag-meio">Sinal 2</span>
             <p class="fala">"Sinal número dois: o efeito elástico no berço. Você vira a cabecinha dele para um lado, mas ele sempre volta para a mesma posição inicial."</p>
             <span class="tela-text">2. CABEÇA QUE SEMPRE VOLTA</span>
-            <p class="fala">"Isso é tensão muscular. O corpinho dele está pedindo ajuda."</p>
+            <p class="fala">"Isso pode ser um forte indício de Torcicolo Congênito ou tensão miofascial. O corpinho dele está pedindo ajuda."</p>
           </div>
- 
           <div class="scene">
             <span class="scene-tag tag-meio">Sinal 3</span>
-            <p class="fala">"Sinal número três: o choro no tummy time. A hora de ficar de bruços é um termômetro. Se ele chora nos primeiros segundos, é sinal de dor ou desconforto no pescoço."</p>
+            <p class="fala">"Sinal número três: o choro no tummy time. A hora de ficar de bruços é um termômetro. Se ele chora nos primeiros segundos, é sinal de dor ou falta de controle cervical."</p>
             <span class="tela-text">3. CHORO NO TUMMY TIME</span>
           </div>
- 
           <div class="scene">
             <span class="scene-tag tag-alerta">A raiz do problema</span>
-            <p class="fala">"A raiz de tudo isso é a tensão muscular. Sem tratamento, o problema evolui para achatamento permanente e falta de mobilidade."</p>
-            <p class="fala">"Muitos pediatras pedem para 'esperar o tempo'. Mas o crânio do seu bebê está calcificando. Tempo perdido é chance de correção perdida."</p>
+            <p class="fala">"A raiz de tudo isso costuma ser a tensão muscular acumulada. Sem tratamento, o problema evolui para achatamento permanente e falta de mobilidade."</p>
+            <p class="fala">"Muitos pedem para 'esperar o tempo'. Mas o crânio do seu bebê está calcificando. Tempo perdido é chance de correção perdida."</p>
             <span class="tela-text">TEMPO PERDIDO = CHANCE DE CORREÇÃO PERDIDA</span>
           </div>
- 
           <div class="scene">
             <span class="scene-tag tag-meio">Solução</span>
-            <p class="fala">"Você tem o poder de corrigir isso em casa através de massagens, mudança de posição e estímulos diários."</p>
+            <p class="fala">"Você tem o poder de corrigir isso em casa através de técnicas de liberação miofascial, mudança de decúbito e estímulos diários corretos."</p>
           </div>
- 
           <div class="scene">
             <span class="scene-tag tag-chamada">CTA</span>
             <p class="fala">"Salva esse vídeo para não esquecer e manda para uma mãe que precisa saber disso agora."</p>
@@ -337,42 +307,31 @@
           </div>
         </div>
       </div>
- 
       <div>
         <div class="sec-head">
           <span class="sec-head-label">✏️ Legenda</span>
           <div class="sec-head-line"></div>
         </div>
         <div class="legenda-box">
-          <p class="legenda-text">1 em cada 5 bebês tem assimetria craniana. E a maioria das mães só percebe quando o caso já avançou.
- 
-Presta atenção nesses 3 sinais:
- 
-1. Cabeça achatada de um lado ou atrás
-→ Plagiocefalia ou braquicefalia. Não desaparece sozinha.
- 
-2. Cabeça que sempre volta para o mesmo lado
-→ Efeito elástico no berço. É tensão muscular, não hábito.
- 
-3. Choro nos primeiros segundos do tummy time
-→ Sinal de dor ou desconforto no pescoço.
- 
-Tempo perdido é chance de correção perdida. A boa notícia é que você pode agir em casa, com massagens, mudança de posição e estímulos diários.
- 
+          <p class="legenda-text">1 em cada 5 bebês tem assimetria craniana. E a maioria das mães só percebe quando o caso já avançou. Presta atenção nesses 3 sinais:
+
+1. Cabeça achatada de um lado ou atrás → Plagiocefalia ou braquicefalia. Não desaparece sozinha.
+2. Cabeça que sempre volta para o mesmo lado → Efeito elástico no berço. Pode ser um indício de Torcicolo Congênito ou tensão fascial, não é apenas um "hábito".
+3. Choro nos primeiros segundos do tummy time → Sinal de dor, desconforto no pescoço ou falta de controle cervical.
+
+Tempo perdido é chance de correção perdida. A boa notícia é que você pode agir em casa, aplicando técnicas de liberação miofascial, mudança de decúbito (posição) e estímulos diários.
+
 Salva esse vídeo e manda para uma mãe que precisa ver isso!
 @laylathuany_</p>
         </div>
       </div>
- 
       <div class="cta-box">
         <span>🔖</span>
         <span><strong>CTA principal:</strong> "Salva esse vídeo e manda para uma mãe que precisa saber disso"</span>
       </div>
- 
     </div>
   </article>
- 
-  <!-- ══════════ REEL 2 ══════════ -->
+
   <article class="reel r2" id="reel2">
     <div class="reel-bar"></div>
     <div class="reel-head">
@@ -384,7 +343,6 @@ Salva esse vídeo e manda para uma mãe que precisa ver isso!
       </div>
     </div>
     <div class="reel-body">
- 
       <div>
         <div class="sec-head">
           <span class="sec-head-label">🎬 Roteiro</span>
@@ -392,52 +350,44 @@ Salva esse vídeo e manda para uma mãe que precisa ver isso!
         </div>
         <div class="script-wrap">
           <div class="script-label-bar">📽 Falas</div>
- 
           <div class="scene">
             <span class="scene-tag tag-gancho">Gancho</span>
             <p class="fala">"Seu bebê tem menos de um mês de vida? Então para de ter medo do chão!"</p>
             <span class="tela-text">Desenvolvimento mês a mês — Mês 1</span>
           </div>
- 
           <div class="scene">
             <span class="scene-tag tag-meio">A Regra dos 15 dias</span>
             <p class="fala">"Quando o recém-nascido completa 15 dias, já é hora de começar o tummy time — a hora de ficar de bruços — no chão."</p>
-            <p class="fala">"E pode respirar aliviada: é super seguro! Ele não vai pegar resfriado, não vai se machucar. Muito pelo contrário — é exatamente isso que vai destravar o desenvolvimento motor dele."</p>
+            <p class="fala">"E pode respirar aliviada: é super seguro! Ele não vai pegar resfriado, não vai se machucar. Muito pelo contrário — é exatamente isso que vai destravar o desenvolvimento neuromotor dele."</p>
             <span class="tela-text">15 DIAS → COMEÇA O TUMMY TIME</span>
           </div>
- 
           <div class="scene">
             <span class="scene-tag tag-meio">A Adaptação</span>
-            <p class="fala">"Se você ainda se sente insegura no começo, tudo bem. Uma alternativa é deitar o bebê de bruços sobre o seu próprio peito, um pouco inclinada."</p>
+            <p class="fala">"Se você ainda se sente insegura no começo, tudo bem. Uma alternativa é deitar o bebê de bruços sobre o seu próprio peito, num plano inclinado."</p>
             <p class="fala">"Mas atenção à regra: completou 30 dias de vida? O chão passa a ser inegociável."</p>
             <span class="tela-text">30 DIAS → CHÃO É INEGOCIÁVEL</span>
           </div>
- 
           <div class="scene">
             <span class="scene-tag tag-meio">O Marco</span>
-            <p class="fala">"E o que exatamente ele precisa fazer lá no chão? O principal marco dessa fase é simples: ele precisa conseguir virar a cabecinha para os dois lados."</p>
-            <span class="tela-text">MARCO DO MÊS 1: VIRAR A CABEÇA DOS DOIS LADOS</span>
+            <p class="fala">"E o que exatamente ele precisa fazer lá no chão? O principal marco dessa fase é simples: ele precisa começar a adquirir controle cervical, conseguindo virar a cabecinha para os dois lados."</p>
+            <span class="tela-text">MARCO DO MÊS 1: CONTROLE CERVICAL</span>
           </div>
- 
           <div class="scene">
             <span class="scene-tag tag-alerta">Sinal de Alerta</span>
-            <p class="fala">"E é aqui que você precisa ligar o radar. Observe se o seu bebê tem um lado favorito."</p>
-            <p class="fala">"Se ele só fica virado para a esquerda e, quando você tenta virar o rostinho dele para a direita, ele volta como um elástico... esse é o seu primeiro sinal de alerta, seja de bruços ou de barriga para cima no berço."</p>
+            <p class="fala">"E é aqui que você precisa ligar o radar. Observe se o seu bebê tem uma preferência posicional evidente."</p>
+            <p class="fala">"Se ele só fica virado para a esquerda e, quando você tenta virar o rostinho dele para a direita, ele volta como um elástico... esse é o seu primeiro sinal de alerta de assimetria, seja no tummy time ou no berço."</p>
             <span class="tela-text">SÓ VIRA PARA UM LADO? SINAL DE ALERTA!</span>
           </div>
- 
           <div class="scene">
             <span class="scene-tag tag-meio">Lidando com o choro</span>
-            <p class="fala">"É normal que bebês dessa idade resmunguem um pouco no tummy time. Ele reclamou? Você tira. A regra de ouro é nunca forçar."</p>
+            <p class="fala">"É normal que bebês dessa idade resmunguem um pouco no tummy time. Ele reclamou de verdade? Você tira. A regra de ouro é estimular, mas nunca forçar."</p>
           </div>
- 
           <div class="scene">
             <span class="scene-tag tag-meio">Direcionamento</span>
-            <p class="fala">"O ideal é fazer de duas a três sessões curtas por dia — de manhã, de tarde e à noite —, deixando sempre o tempo que ele tolerar."</p>
-            <p class="fala">"Se a rotina estiver uma loucura e não der para fazer tudo isso, garanta pelo menos uma vez ao dia. Quanto mais você oferecer esse estímulo, melhor ele vai se desenvolver!"</p>
+            <p class="fala">"O ideal é fazer de duas a três sessões curtas por dia — deixando sempre o tempo que o tônus muscular dele tolerar."</p>
+            <p class="fala">"Se a rotina estiver uma loucura, garanta pelo menos uma vez ao dia. Quanto mais você oferecer esse estímulo, melhor será o desenvolvimento global!"</p>
             <span class="tela-text">2 a 3x por dia · no tempo que ele tolerar</span>
           </div>
- 
           <div class="scene">
             <span class="scene-tag tag-chamada">CTA</span>
             <p class="fala">"Já salva esse vídeo para consultar depois e me segue, porque no próximo vídeo vamos falar sobre o bebê de 1 a 2 meses!"</p>
@@ -445,7 +395,6 @@ Salva esse vídeo e manda para uma mãe que precisa ver isso!
           </div>
         </div>
       </div>
- 
       <div>
         <div class="sec-head">
           <span class="sec-head-label">✏️ Legenda</span>
@@ -453,35 +402,29 @@ Salva esse vídeo e manda para uma mãe que precisa ver isso!
         </div>
         <div class="legenda-box">
           <p class="legenda-text">Você tem medo de colocar o bebê no chão? Isso precisa mudar.
- 
+
 Com 15 dias de vida já é hora de começar o tummy time — e sim, é completamente seguro!
- 
-Marco do mês 1: conseguir virar a cabeça para os dois lados.
- 
-Se o seu bebê só vira para um lado e volta como um elástico quando você tenta mudar... esse é o primeiro sinal de alerta.
- 
+
+Marco do mês 1: Iniciar o controle cervical e conseguir virar a cabeça para os dois lados.
+Se o seu bebê apresenta uma "preferência posicional", ou seja, só vira para um lado e volta como um elástico quando você tenta mudar... esse é um forte sinal de alerta para assimetrias.
+
 Como fazer:
 - 2 a 3 sessões curtas por dia
 - Pelo menos 1x ao dia se a rotina apertar
-- Nunca force — ele reclamou? Você tira.
-- Se insegura no começo, coloque-o de bruços no seu peito inclinado
- 
-Quanto mais estímulo, melhor o desenvolvimento!
- 
-Salva esse vídeo e me segue — no próximo a gente fala sobre o bebê de 1 a 2 meses!
+- Nunca force — ele reclamou muito? Você tira.
+- Se insegura no começo, coloque-o de bruços no seu peito num plano inclinado.
+
+Quanto mais estímulo, melhor o desenvolvimento neuromotor! Salva esse vídeo e me segue — no próximo a gente fala sobre o bebê de 1 a 2 meses!
 @laylathuany_</p>
         </div>
       </div>
- 
       <div class="cta-box">
         <span>🔖</span>
         <span><strong>CTA principal:</strong> "Salva esse vídeo e me segue para o próximo da série"</span>
       </div>
- 
     </div>
   </article>
- 
-  <!-- ══════════ REEL 3 ══════════ -->
+
   <article class="reel r3" id="reel3">
     <div class="reel-bar"></div>
     <div class="reel-head">
@@ -493,7 +436,6 @@ Salva esse vídeo e me segue — no próximo a gente fala sobre o bebê de 1 a 2
       </div>
     </div>
     <div class="reel-body">
- 
       <div>
         <div class="sec-head">
           <span class="sec-head-label">🎬 Roteiro</span>
@@ -501,52 +443,44 @@ Salva esse vídeo e me segue — no próximo a gente fala sobre o bebê de 1 a 2
         </div>
         <div class="script-wrap">
           <div class="script-label-bar">📽 Falas</div>
- 
           <div class="scene">
             <span class="scene-tag tag-gancho">Gancho</span>
             <p class="fala">"Mães, prestem muita atenção: nem tudo o que o seu bebê sente é 'só uma fase'. Existem 5 sinais discretos de que o corpinho dele pode estar pedindo ajuda!"</p>
             <span class="tela-text">VOCÊ ESTÁ VENDO ESSES SINAIS?</span>
           </div>
- 
           <div class="scene">
             <span class="scene-tag tag-meio">Sinal 1</span>
-            <p class="fala">"Sinal número um: o vício de posição. Observe se o seu bebê sempre vira a cabeça para o mesmo lado no berço ou no colo. Preferência de lado não deve ser ignorada!"</p>
-            <span class="tela-text">1. SEMPRE VIRA PARA O MESMO LADO</span>
+            <p class="fala">"Sinal número um: o vício de posição, também chamado de preferência posicional. Observe se o seu bebê sempre vira a cabeça para o mesmo lado no berço ou no colo. Isso não deve ser ignorado!"</p>
+            <span class="tela-text">1. PREFERÊNCIA POSICIONAL</span>
           </div>
- 
           <div class="scene">
             <span class="scene-tag tag-meio">Sinal 2</span>
-            <p class="fala">"Sinal número dois: a simetria. Veja se a cabecinha dele está ficando mais achatada de um lado do que do outro. E lembre-se: quanto antes você observar isso, melhor."</p>
-            <span class="tela-text">2. CABEÇA ASSIMÉTRICA</span>
+            <p class="fala">"Sinal número dois: a simetria. Veja se a cabecinha dele está ficando mais achatada de um lado do que do outro, formando uma assimetria craniana. E lembre-se: quanto antes você observar, melhor."</p>
+            <span class="tela-text">2. ASSIMETRIA CRANIANA</span>
           </div>
- 
           <div class="scene">
             <span class="scene-tag tag-meio">Sinal 3</span>
-            <p class="fala">"Terceiro sinal: ele mama muito bem de um peito, mas briga ou chora no outro? Às vezes isso não é manha. Pode ser tensão no corpinho que causa desconforto ao virar o pescoço."</p>
-            <span class="tela-text">3. CHORA EM UM DOS PEITOS</span>
+            <p class="fala">"Terceiro sinal: ele mama muito bem de um peito, mas briga ou chora no outro? Às vezes não é o fluxo de leite. Pode ser tensão na cervical que causa dor ao virar o pescoço."</p>
+            <span class="tela-text">3. CHORA EM APENAS UM DOS PEITOS</span>
           </div>
- 
           <div class="scene">
             <span class="scene-tag tag-meio">Sinal 4</span>
-            <p class="fala">"Quarto sinal: observe se o bebê se estica muito, joga a cabeça para trás com força ou fica irritado com facilidade. O choro e essa tensão corporal são a forma dele se comunicar com você."</p>
-            <span class="tela-text">4. TENSÃO CORPORAL E IRRITAÇÃO</span>
+            <p class="fala">"Quarto sinal: observe se o bebê apresenta hipertonia — ele se estica muito, joga a cabeça para trás com força feito um arco, ou fica irritado facilmente. Essa tensão exagerada é a forma do sistema nervoso dele se comunicar."</p>
+            <span class="tela-text">4. HIPERTONIA E IRRITAÇÃO</span>
           </div>
- 
           <div class="scene">
             <span class="scene-tag tag-meio">Sinal 5</span>
-            <p class="fala">"E o quinto sinal, que surpreende muita gente: cólicas, gases, refluxo ou muita dificuldade para fazer cocô. Acredite — o intestino também sofre e trava quando o corpo inteiro está em tensão."</p>
-            <span class="tela-text">5. CÓLICA · GASES · REFLUXO</span>
+            <p class="fala">"E o quinto sinal, que surpreende muita gente: cólicas, gases, refluxo ou disquesia — aquela dificuldade enorme para conseguir fazer cocô. Acredite: o sistema gastrointestinal também sofre e trava quando o corpo inteiro está em tensão."</p>
+            <span class="tela-text">5. DISQUESIA · GASES · REFLUXO</span>
           </div>
- 
           <div class="scene">
             <span class="scene-tag tag-chamada">CTA</span>
-            <p class="fala">"Todos esses sinais não são 'coisas de bebê'. Eles indicam tensões que precisam ser liberadas. Se você identificou algum deles, não espere passar sozinho."</p>
+            <p class="fala">"Todos esses sinais não são apenas 'coisas de bebê'. Eles indicam tensões neuromusculares que precisam ser avaliadas e liberadas."</p>
             <p class="fala">"Já salva esse vídeo para não esquecer de observar esses detalhes — e compartilha com uma mãe que precisa saber disso!"</p>
             <span class="tela-text">SALVA E COMPARTILHA · @laylathuany_</span>
           </div>
         </div>
       </div>
- 
       <div>
         <div class="sec-head">
           <span class="sec-head-label">✏️ Legenda</span>
@@ -554,31 +488,27 @@ Salva esse vídeo e me segue — no próximo a gente fala sobre o bebê de 1 a 2
         </div>
         <div class="legenda-box">
           <p class="legenda-text">Nem tudo que o seu bebê sente é "só uma fase". Existem sinais que o corpinho dele dá — e que a maioria das mães não sabe reconhecer.
- 
+
 5 sinais discretos de alerta:
- 
-1. Sempre vira a cabeça para o mesmo lado
-2. Cabeça ficando assimétrica ou achatada
-3. Mama bem em um peito, mas chora no outro
-4. Se estica muito, joga a cabeça para trás, fica irritado com facilidade
-5. Cólicas, gases, refluxo ou dificuldade para fazer cocô
- 
-Todos esses sinais indicam tensões no corpinho que precisam ser liberadas. Não espere passar sozinho.
- 
+1. Sempre vira a cabeça para o mesmo lado (Preferência Posicional)
+2. Cabeça ficando assimétrica ou achatada (Assimetria Craniana)
+3. Mama bem em um peito, mas chora no outro (Tensão Cervical)
+4. Se estica muito, joga a cabeça para trás como um arco (Hipertonia)
+5. Cólicas, gases, refluxo ou extrema dificuldade para fazer cocô (Disquesia)
+
+Todos esses sinais indicam tensões neuromusculares no corpinho que precisam ser liberadas e avaliadas. Não espere passar sozinho.
+
 Salva esse vídeo e manda para uma mãe que precisa ver isso!
 @laylathuany_ · 📞 (86) 99521-0431</p>
         </div>
       </div>
- 
       <div class="cta-box">
         <span>🔖</span>
         <span><strong>CTA principal:</strong> "Salva e compartilha com uma mãe que precisa saber disso"</span>
       </div>
- 
     </div>
   </article>
- 
-  <!-- ══════════ REEL 4 ══════════ -->
+
   <article class="reel r4" id="reel4">
     <div class="reel-bar"></div>
     <div class="reel-head">
@@ -590,7 +520,6 @@ Salva esse vídeo e manda para uma mãe que precisa ver isso!
       </div>
     </div>
     <div class="reel-body">
- 
       <div>
         <div class="sec-head">
           <span class="sec-head-label">🎬 Roteiro</span>
@@ -598,37 +527,31 @@ Salva esse vídeo e manda para uma mãe que precisa ver isso!
         </div>
         <div class="script-wrap">
           <div class="script-label-bar">📽 Falas</div>
- 
           <div class="scene">
             <span class="scene-tag tag-gancho">Gancho</span>
-            <p class="fala">"Mães, pais — vocês já pararam para pensar no impacto que o engatinhar do seu bebê tem no futuro dele?"</p>
+            <p class="fala">"Mães, pais — vocês já pararam para pensar no impacto que os primeiros marcos motores do seu bebê têm no futuro dele?"</p>
             <span class="tela-text">O que você ignora hoje pode custar caro amanhã</span>
           </div>
- 
           <div class="scene">
             <span class="scene-tag tag-alerta">Conexão 1</span>
-            <p class="fala">"Pular marcos importantes, como o engatinhar, pode parecer um detalhe... assim como ignorar a hipotonia não trabalhada."</p>
+            <p class="fala">"Pular marcos importantes, como a fase do arrastar e engatinhar, pode parecer apenas um detalhe... assim como ignorar um quadro de hipotonia não trabalhada."</p>
             <span class="tela-text">MARCOS PULADOS = CONSEQUÊNCIAS FUTURAS</span>
           </div>
- 
           <div class="scene">
             <span class="scene-tag tag-alerta">Conexão 2</span>
-            <p class="fala">"E um torcicolo não tratado agora? Pode se transformar em escoliose amanhã."</p>
+            <p class="fala">"E um torcicolo congênito não tratado agora na fase bebê? Pode facilmente se transformar em uma escoliose estrutural amanhã."</p>
             <span class="tela-text">TORCICOLO HOJE → ESCOLIOSE AMANHÃ</span>
           </div>
- 
           <div class="scene">
             <span class="scene-tag tag-meio">A Engrenagem</span>
-            <p class="fala">"Entenda: o corpo da criança funciona como uma engrenagem. Quando uma parte não está bem, todo o resto é afetado."</p>
-            <span class="tela-text">UM PROBLEMA AFETA O CORPO TODO</span>
+            <p class="fala">"Entenda: o corpo da criança funciona através de cadeias musculares integradas, como uma engrenagem exata. Quando uma estrutura não está bem, todo o resto compensa e é afetado."</p>
+            <span class="tela-text">CADEIAS MUSCULARES: UM PROBLEMA AFETA O CORPO TODO</span>
           </div>
- 
           <div class="scene">
             <span class="scene-tag tag-meio">A Virada</span>
-            <p class="fala">"Por isso, não deixe para depois. Quanto antes você buscar uma avaliação profissional, mais simples é corrigir — ou minimizar — os impactos."</p>
+            <p class="fala">"Por isso, a intervenção precoce é fundamental. Quanto antes você buscar uma avaliação de fisioterapia neurofuncional, mais simples é corrigir os padrões e minimizar os impactos."</p>
             <span class="tela-text">QUANTO ANTES, MAIS SIMPLES DE CORRIGIR</span>
           </div>
- 
           <div class="scene">
             <span class="scene-tag tag-chamada">CTA</span>
             <p class="fala">"Se você ficou com essa informação na cabeça, salva esse vídeo. E manda para um pai ou uma mãe que precisa ouvir isso hoje."</p>
@@ -636,44 +559,39 @@ Salva esse vídeo e manda para uma mãe que precisa ver isso!
           </div>
         </div>
       </div>
- 
       <div>
         <div class="sec-head">
           <span class="sec-head-label">✏️ Legenda</span>
           <div class="sec-head-line"></div>
         </div>
         <div class="legenda-box">
-          <p class="legenda-text">Pular o engatinhar parece detalhe. Ignorar a hipotonia parece detalhe. Um torcicolo "pequeno" parece detalhe.
- 
-Mas o corpo da criança funciona como uma engrenagem — quando uma parte não está bem, todo o resto é afetado.
- 
-- Torcicolo não tratado → escoliose
-- Marcos pulados → atrasos no desenvolvimento
-- Hipotonia não trabalhada → impacto motor a longo prazo
- 
-Quanto antes você buscar uma avaliação, mais simples é corrigir. Não espere virar um problema maior.
- 
-Sou Layla Thuany, fisioterapeuta em Pedro II - PI, com atendimento domiciliar pediátrico.
- 
-Salva esse post e manda para um pai ou mãe que precisa ver isso!
+          <p class="legenda-text">Pular o engatinhar parece detalhe. Ignorar a hipotonia (baixo tônus muscular) parece detalhe. Um torcicolo "pequeno" parece detalhe.
+
+Mas o corpo da criança funciona através de cadeias musculares integradas, como uma verdadeira engrenagem — quando uma parte não está bem ou compensa um movimento, todo o resto é afetado.
+
+- Torcicolo não tratado → Escoliose estrutural
+- Marcos pulados → Atrasos no desenvolvimento global
+- Hipotonia não trabalhada → Impacto motor e postural a longo prazo
+
+A intervenção precoce é sua maior aliada. Quanto antes você buscar uma avaliação, mais simples é corrigir. Não espere virar um problema maior.
+
+Sou Layla Thuany, fisioterapeuta pediátrica e neurofuncional em Pedro II - PI, com atendimento domiciliar. Salva esse post e manda para um pai ou mãe que precisa ver isso!
 @laylathuany_ · 📞 (86) 99521-0431</p>
         </div>
       </div>
- 
       <div class="cta-box">
         <span>🔖</span>
         <span><strong>CTA principal:</strong> "Salva esse vídeo e manda para um pai ou mãe que precisa ouvir isso"</span>
       </div>
- 
     </div>
   </article>
- 
+
 </main>
- 
+
 <footer class="footer">
   <span class="footer-name">Layla Thuany</span>
   <p class="footer-sub">@laylathuany_ · Fisioterapeuta · Pedro II, Piauí 🦋</p>
 </footer>
- 
+
 </body>
 </html>
